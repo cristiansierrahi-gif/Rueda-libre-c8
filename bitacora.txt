@@ -1,0 +1,8 @@
+PUnto uno:
+URL: http://127.0.0.1:5500/index.html
+Protocolo: http
+Petición: GET
+host: 127.0.0.1:5500
+ruta: /index.html
+codigo de estado:200
+codigo error: 404 Not Found - Cannot GET /promociones.html
