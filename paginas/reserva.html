@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva tu bicicleta</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <!--Header con titulo y secmento de barra nav-->
+    <header id="Header">
+        <a href="../index.html"><img src="../img/logos/Logo.png" alt="Logo" width="100" height="100"></a>
+        <h1><a href="../index.html">Rueda Libre</a></h1>
+        <p>El mejor espacio para conseguir alquiler de bicicletas de alta calidad en el área metropolitana</p>
+        <!--Lista de enlaces-->
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="tarifas.html">Tarifas y rutas</a></li>
+                <li><a href="reserva.html">Reservas</a></li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
+
+
+    <main id="horario">
+        <h2 tabindex="0">Reserva de bicicleta.</h2>
+        <p>Para solicitar el alquiler de tu bicicleta, debes llenar este formulario, recuerda solicitarlo en
+            nuestros
+            horarios de atención:</p>
+        <aside>
+            <dl>
+                <dt>Horario de atención: <strong>Lunes a Viernes</strong></dt>
+                <dd>Desde las 7 am.</dd>
+                <dd>Hasta las 7 pm.</dd>
+                <dt>Horario de atención: <strong>Sabados, Domingos y Festivos:</strong></dt>
+                <dd>Desde las 6:00 a. m</dd>
+                <dd>Hasta las 2:00 p. m.</dd>
+            </dl>
+        </aside>
+
+        <!--Formulario-->
+        <section id="Formulario">
+            <h2 tabindex="0">Formulario de reserva"</h2>
+            <form action="#" method="post">
+                <!--Campo Tus Datos-->
+                <fieldset>
+                    <legend>Tus Datos</legend>
+                    <p>
+                        <!--Nombre-->
+                        <label for="nombre">Nombre Completo</label>
+                        <input type="text" id="nombre" name="nombre" required minlength="3" required>
+                    </p>
+                    <p>
+                        <!--Documento-->
+                        <label for="tipo-documento">Tipo de Documento</label>
+                        <select name="tipo-documento" id="tipo-documento" required>
+                            <option value="" disabled selected>Selecciona una opción</option>
+                            <option value="ce">Cédula de ciudadanía</option>
+                            <option value="ce">Cédula de extranjería</option>
+                            <option value="pasaporte ">Pasaporte</option>
+                            <option value="ti">Tarjeta de identidad</option>
+                        </select>
+                    </p>
+                    <label for="numero-documento">Numero de Documento</label>
+                    <input type="text" id="numero-documento" name="numero-documento" required maxlength="10" required>
+                    </p>
+                    <p>
+                        <!--Correo-->
+                        <label for="correo">Correo Electronico</label>
+                        <input type="email" id="correo" name="correo" required>
+                    </p>
+                    <p>
+                        <label for="telefono">Celular (10 digitos)</label>
+                        <input type="tel" id="telefono" name="telefono" pattern="[0-9]{10}" maxlength="10" required>
+                    </p>
+                </fieldset>
+
+                <!--Campo Tu Alquiler-->
+                <fieldset>
+                    <legend>Tu Alquiller</legend>
+                    <p>
+                        <!--Fecha-->
+                        <label for="fecha-reserva">Fecha de reserva:</label>
+                        <input type="date" id="fecha-reserva" name="fecha-reserva" min="2026-11-01" max="2026-12-31">
+                    </p>
+                    <p>
+                        <!--Tipo de bicicleta y plan-->
+                        <!--Bicicletas-->
+                        <label for="tipo-alquiler">Selecciona tu bicicleta</label>
+                        <select name="tipo-alquiler" id="tipo-alquiler" required>
+                            <option value="" disabled selected>Selecciona una opción</option>
+                            <option value="urbana">Urbana</option>
+                            <option value="">Montaña</option>
+                            <option value="">Eléctrica </option>
+                            <lab for="horas">Selecciona tu alquiler</lab>
+                        </select>
+                    </p>
+                    <p>
+                        <!--Plan-->
+                        <label for="tipo-plan">Selecciona el plan</label>
+                        <select name="tipo-plan" id="tipo-plan" required>
+                            <option value="" disabled selected>Selecciona una opcion</option>
+                            <option value="no-aplica">No aplica</option>
+                            <option value="rio">Río y Parques</option>
+                            <option value="sabores">Sabores de Barrio</option>
+                            <option value="reto">Reto Las Palmas</option>
+                        </select>
+                    </p>
+                    <p>
+                        <!--Cantidad-->
+                        <label for="cantidad">Cantidad (entre 1 y 6):</label>
+                        <input type="tel" id="cantidad" name="cantidad" pattern="[1-6]{1}" maxlength="1">
+                    </p>
+                </fieldset>
+                <!--Campo Confirmación-->
+                <fieldset>
+                    <legend>Confirmación</legend>
+                    <p>
+                        <label for="comentarios">Comentarios (Opcionales)</label>
+                        <input type="text" id="comentarios" name="comentarios" maxlength="300">
+                        <label>
+                    </p>
+                    <p>
+                            <input type="checkbox" name="politicas" required>
+                            Acepto los <a href="politicas.html" target="_blank" rel="noopener noreferrer">términos y
+                                condiciones</a> del servicio.
+                        </label>
+                    </p>
+                </fieldset>
+                <p><button type="submit">Enviar mensaje</button></p>
+            </form>
+        </section>
+    </main>
+    <hr>
+    <footer>
+        <address>
+            Rueda Libre - 2026 <br>
+            Correo electronico <a href="mailto:hola@ruedalibre.example" target="_blank"
+                rel="noopener noreferrer">hola@ruedalibre.example</a>
+        </address>
+    </footer>
+</body>
+
+</html>

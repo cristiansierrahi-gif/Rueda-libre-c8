@@ -8,152 +8,130 @@
     <meta name="description"
         content="Rueda Libre es una empresa que fomenta para la movilidad sostenible y el uso de bicicletas en la ciudad por medio del modelo de alquiler.">
     <meta name="author" content="Nodo Digital">
+    <title>Rueda Libre | Alquiler de bicicletas en Medellín</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
     <!--Header con titulo y secmento de barra nav-->
     <header id="Header">
-        <title>Rueda Libre | Alquiler de bicicletas en Medellín</title>
-        <h1 ><a href="index.html">Rueda Libre</a></h1>
+        <a href="index.html"><img src="img/logos/Logo.png" alt="Logo" width="100" height="100"></a>
+        <h1><a href="index.html">Rueda Libre</a></h1>
         <p>El mejor espacio para conseguir alquiler de bicicletas de alta calidad en el área metropolitana</p>
+
+        <!--Lista de enlaces-->
+        <nav id="solicitud">
+        <ul>
+            <li><a href="#cuerpo">Inicio</a></li>
+            <li><a href="paginas/tarifas.html">Tarifas y rutas</a></li>
+            <li><a href="paginas/reserva.html">Reservas</a></li>
+        </ul>
         <!--Nav de navegacion-->
-        <nav>
-            <ul>
-                <li><a href="#somos">¿Quienes somos?</a></li>
-                <li><a href="#servicios">Nuestros servicios</a></li>
-                <!--Contenido de nuestros servicios-->
-                <ul>
-                    <li><a href="#alquiler">Alquiler de bicicletas</a></a></li>
-                    <li><a href="#recorrido">Recorridos Guiados</a> </li>
-                    <li><a href="taller">Taller básico</a></li>
-                </ul>
-                <!--Cierre de contenido de nuestros servicios-->
-                <li><a href="#como">¿Como alquilar?</a></li>
-                <li>Tarifas</li>
-                <ul>
-                    <li><a href="paginas/tarifas.html#alquiler">Alquiler</a></li>
-                    <li><a href="#recorridos">Recorridos</a></li>
-                </ul>
-                <li><a href="#encuentranos">Encuentranos</a></li>
-            </ul>
+        
+            <p><a href="#somos">¿Quienes somos?</a> <a href="#servicios">Nuestros servicios</a> <a href="#como">¿Como
+                    alquilar?</a> <a href="paginas/tarifas.html#alquiler">Alquiler</a> <a
+                    href="#recorridos">Recorridos</a> <a href="#encuentranos">Encuentranos</a></p>
         </nav>
     </header>
 
     <!--Contenido principal y único de la página -->
-    <main>
+    <main id="cuerpo">
         <!--Banner publicitario 1 -->
-        <img src="img/Recursos/banner.png" alt="Bicicleta de alquiler">
+        <img src="img/Recursos/banner.png" alt="Bicicleta de alquiler" width="1000" height="500">
 
         <!--Bloque Quienes somos-->
-        <section id="somos">
-            <header>
-                <h2>¿Quienes somos?</h2>
-                <p>Somo una empresa Colombiana que busca mejorar el sistema de movilidad del área metropolitana por
-                    medio del
-                    <strong>alquiler de bicicletas.</strong><br>
-            </header>
-            Contamos con gran variedad de bicicletas y de distintos deportes para que puedas moverte de la forma que mas
-            te guste.
+        <header id="somos">
+            <h2 tabindex="0">¿Quienes somos?</h2>
+            <p>Somo una empresa Colombiana que busca mejorar el sistema de movilidad del área metropolitana por
+                medio del
+                <strong>alquiler de bicicletas.</strong><br>
+                Contamos con gran variedad de bicicletas y de distintos deportes para que puedas moverte de la forma que
+                mas
+                te guste.
             </p>
-        </section>
-
-        <!--Bloque Contactanos-->
-        <article id="Contactanos">
-            <h2>Contactanos</h2>
-            <address>
-                Correo electronico <a href="mailto:hola@ruedalibre.example" target="_blank"
-                    rel="noopener noreferrer">hola@ruedalibre.example</a>
-            </address>
-        </article>
-
-        <!--Bloque Servicios-->
-        <article id="servicios">
-            <h2>Nuestros servicios</h2>
-        </article>
+        </header>
 
         <!--Bloque Alquiler-->
         <article id="alquiler">
-            <header>
-                <h2>Alquiler de bicicletas</h2>
-                <p>Contamos con bicicletas de ciudad, MTB, BMX. Todas estas cuentan con <strong>candado y
-                        casco</strong>.</p>
-                <h3>Solicita tu alquiler</h3>
-                <table>
-                    <thead>
-                        <!--Titulo de la tabla-->
-                        <tr>
-                            <th>Virtual</th>
-                            <th>Presencial</th>
-                        </tr>
-                    </thead>
-                    <!--Cuerpo de la tabla-->
-                    <tbody>
-                        <tr>
-                            <td>
-                                <ol> <!--Virtual-->
-                                    <li><strong>Registro y Verificación de Usuario:</strong>
-                                        <p>Crea una cuenta en la plataforma ingresando tus datos personales (nombre,
-                                            correo y teléfono) y sube una fotografía de tu documento de identidad para
-                                            validar tu perfil.</p>
-                                    </li>
-                                    <li><strong>Selección del Módulo y Tipo de Bicicleta:</strong>
-                                        <p>Navega por el catálogo, elige la bicicleta que mejor se adapte a tus
-                                            necesidades (urbana, eléctrica, de montaña) y selecciona la estación de
-                                            recogida o la opción de entrega a domicilio.</p>
-                                    </li>
-                                    <li><strong>Configuración de Fechas y Horarios:</strong>
-                                        <p>Indica en el calendario interactivo el día y la hora exacta de inicio de la
-                                            reserva, así como la duración estimada del alquiler (horas, días o semanas).
-                                        </p>
-                                    </li>
-                                    <li><strong>Pago y Depósito de Garantía:</strong>
-                                        <p>Introduce tu método de pago preferido (tarjeta de crédito/débito o billetera
-                                            digital) para abonar la tarifa del servicio y autorizar la retención
-                                            temporal del depósito de seguridad.</p>
-                                    </li>
-                                    <li><strong>Confirmación y Código de Desbloqueo:</strong>
-                                        <p>Recibe el comprobante digital con la confirmación de la reserva y un código
-                                            QR (o PIN numérico) que utilizarás para retirar la bicicleta en la estación
-                                            seleccionada.</p>
-                                    </li>
-                                </ol>
-                            </td>
-                            <td>
-                                <ol> <!--Presencial-->
-                                    <li><strong>Acreditación en Ventanilla:</strong>
-                                        <p>Acércate al módulo de atención y presenta tu documento de identidad original
-                                            para que el encargado verifique tus datos en el sistema.</p>
-                                    </li>
-                                    <li><strong>Elección y Inspección de la Bicicleta:</strong>
-                                        <p>Selecciona el modelo disponible en el punto de atención y realiza una breve
-                                            inspección física junto al personal para verificar que los frenos, llantas y
-                                            luces estén en buen estado.</p>
-                                    </li>
-                                    <li><strong>Acuerdo de Horarios y Servicios Extra:</strong>
-                                        <p>Define la cantidad de tiempo que usaremos la bicicleta e indica si requieres
-                                            accesorios adicionales (como casco, candado de alta seguridad o
-                                            portaequipaje).</p>
-                                    </li>
-                                    <li><strong>Firma de Contrato y Pago:</strong>
-                                        <p>Firma el formulario físico (o firma digital en tablet) con los términos y
-                                            condiciones del servicio, y realiza el pago en efectivo o con datáfono.</p>
-                                    </li>
-                                    <li><strong>Entrega e Instrucciones de Uso:</strong>
-                                        <p>Recibe la bicicleta junto con las llaves del candado y una breve explicación
-                                            sobre las normas de circulación y los puntos autorizados de devolución.</p>
-                                    </li>
-                                </ol>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </header>
+            <h2 tabindex="0">Alquiler de bicicletas</h2>
+            <p>Contamos con bicicletas de ciudad, electricas y montaña. Todas estas cuentan con <strong>candado y
+                    casco</strong>.</p>
+            <h3 tabindex="0">Solicita tu alquiler</h3>
+            <table>
+                <thead>
+                    <!--Titulo de la tabla-->
+                    <tr>
+                        <th>Virtual</th>
+                        <th>Presencial</th>
+                    </tr>
+                </thead>
+                <!--Cuerpo de la tabla-->
+                <tbody>
+                    <tr>
+                        <td>
+                            <ol> <!--Virtual-->
+                                <li><strong>Registro y Verificación de Usuario:</strong>
+                                    <p>Crea una cuenta en la plataforma ingresando tus datos personales (nombre,
+                                        correo y teléfono) y sube una fotografía de tu documento de identidad para
+                                        validar tu perfil.</p>
+                                </li>
+                                <li><strong>Selección del Módulo y Tipo de Bicicleta:</strong>
+                                    <p>Navega por el catálogo, elige la bicicleta que mejor se adapte a tus
+                                        necesidades (urbana, eléctrica, de montaña) y selecciona la estación de
+                                        recogida o la opción de entrega a domicilio.</p>
+                                </li>
+                                <li><strong>Configuración de Fechas y Horarios:</strong>
+                                    <p>Indica en el calendario interactivo el día y la hora exacta de inicio de la
+                                        reserva, así como la duración estimada del alquiler (horas, días o semanas).
+                                    </p>
+                                </li>
+                                <li><strong>Pago y Depósito de Garantía:</strong>
+                                    <p>Introduce tu método de pago preferido (tarjeta de crédito/débito o billetera
+                                        digital) para abonar la tarifa del servicio y autorizar la retención
+                                        temporal del depósito de seguridad.</p>
+                                </li>
+                                <li><strong>Confirmación y Código de Desbloqueo:</strong>
+                                    <p>Recibe el comprobante digital con la confirmación de la reserva y un código
+                                        QR (o PIN numérico) que utilizarás para retirar la bicicleta en la estación
+                                        seleccionada.</p>
+                                </li>
+                            </ol>
+                        </td>
+                        <td>
+                            <ol> <!--Presencial-->
+                                <li><strong>Acreditación en Ventanilla:</strong>
+                                    <p>Acércate al módulo de atención y presenta tu documento de identidad original
+                                        para que el encargado verifique tus datos en el sistema.</p>
+                                </li>
+                                <li><strong>Elección y Inspección de la Bicicleta:</strong>
+                                    <p>Selecciona el modelo disponible en el punto de atención y realiza una breve
+                                        inspección física junto al personal para verificar que los frenos, llantas y
+                                        luces estén en buen estado.</p>
+                                </li>
+                                <li><strong>Acuerdo de Horarios y Servicios Extra:</strong>
+                                    <p>Define la cantidad de tiempo que usaremos la bicicleta e indica si requieres
+                                        accesorios adicionales (como casco, candado de alta seguridad o
+                                        portaequipaje).</p>
+                                </li>
+                                <li><strong>Firma de Contrato y Pago:</strong>
+                                    <p>Firma el formulario físico (o firma digital en tablet) con los términos y
+                                        condiciones del servicio, y realiza el pago en efectivo o con datáfono.</p>
+                                </li>
+                                <li><strong>Entrega e Instrucciones de Uso:</strong>
+                                    <p>Recibe la bicicleta junto con las llaves del candado y una breve explicación
+                                        sobre las normas de circulación y los puntos autorizados de devolución.</p>
+                                </li>
+                            </ol>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </article>
 
         <!--Bloque Beneficios-->
         <article id="Beneficios">
             <header>
-                <h2>Beneficios</h2>
+                <h2 tabindex="0">Beneficios</h2>
                 <p>Contamos con alianzas de recorridos con grandes empresas como lo son <strong>Comfama,Alcaldia de
                         Medellin y Inder</strong>con el objetivo de crear un espacio seguro y diverso en tus
                     actividades. <br>
@@ -161,49 +139,48 @@
             </header>
 
             <!--Benefecios Sede-->
-            <section id="Sede">
-                <h3>Sede:</h3>
+            <article id="Sede">
+                <h2 tabindex="0">Sede:</h2>
                 <ul>
                     <li>Acceso a una amplia variedad de bicicletas para diferentes actividades.</li>
                     <li>Soporte técnico y atención al cliente.</li>
                     <li>Seguro ante perdida y robo.</li>
                 </ul>
-            </section>
-        </article>
+            </article>
+
         <!--Benefecios Recorrido-->
-        <section id="recorrido">
-            <h3>Recorridos guiados:</h3>
+        <article id="recorrido">
+            <h2 tabindex="0">Recorridos guiados:</h2>
             <p>Se programan quincenalmente recorridos por partes del valle de aburra y sus alrededores, lo que permite
                 viajar
                 y disfrutar del deporte que tanto amamos.<br>
                 Contamos con alianzas con <strong>Comfama</strong> y <strong>Inder</strong> para el apoyo de estas
                 actividades.</p>
-
+                </article>
             <article id="Recorrido">
                 <h2>Recorrido Quincenal: <time datetime="31-10-2026">31 de Octubre</time></h2>
                 <p>En este mes de octubre haremos la ruta del cerro del volador con disfraces!</p>
                 <a href="https://maps.app.goo.gl/w4BMP2JzTjfo9PBx7" target="_blank">
-                    <img src="img/Recursos/Ruta.png" alt="50"> 
+                    <img src="img/Recursos/Ruta.png" alt="Recorrido que se va a realizar">
                 </a>
-            </article>
-        </section>
-        <section id="taller">
-            <h3>Taller básico</h3>
+        </article>
+        <article id="taller">
+            <h2 tabindex="0">Taller básico</h2>
             <p>Contamos con programa de enseñanza para los <strong>niños, jovenes y adultos</strong> que quieran
                 aprender a
                 montar bicicleta.</p>
-        </section>
+        </article>
 
-        <section id="como">
-            <h2>¿Como alquilar?</h2>
+        <article id="como">
+            <h2 tabindex="0">¿Como alquilar?</h2>
             <p>Para alquilar nuestras bicicletas necesitas ser <strong>mayor de edad, en caso de querer alquilarla
                     siendo
                     menor de edad debes venir con un mayor de edad.</strong> <br>
                 Necesitamos tu <strong>cedula y un coodeudor</strong> para respaldar la reposición en caso de daños o
                 perdida sin justificación.</p>
-        </section>
-        <section id="procedimiento">
-            <h3>Procedimiento de alquiler</h3>
+        </article>
+        <section id="pasos">
+            <h3 tabindex="0">Procedimiento de alquiler</h3>
             <table id="procedimiento">
                 <tr>
                     <th>Virtual</th>
@@ -230,12 +207,23 @@
                 </tr>
             </table>
         </section>
+
+        <article id="encuentranos">
+            <h2 tabindex="0">Encuentranos</h2>
+            <p>Puedes encontrarnos en el centro comercial: De Moda Outlet <br>
+                Dirección: Cl. 16 #55-129, Guayabal, Medellín, Guayabal</p>
+        </article>
     </main>
-    <section id="encuentranos">
-        <h2>Encuentranos</h2>
-        <p>Puedes encontrarnos en el centro comercial: De Moda Outlet <br>
-            Dirección: Cl. 16 #55-129, Guayabal, Medellín, Guayabal</p>
-    </section>
+
+    <!--Pie de pagina-->
+    <hr>
+    <footer>
+        <address>
+            Rueda Libre - 2026 <br>
+            Correo electronico <a href="mailto:hola@ruedalibre.example" target="_blank"
+                rel="noopener noreferrer">hola@ruedalibre.example</a>
+        </address>
+    </footer>
 </body>
 
 </html>

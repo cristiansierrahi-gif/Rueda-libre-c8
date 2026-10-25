@@ -1,0 +1,61 @@
+/*Verde Ruta #1E7A4F Botones y enlaces
+
+Naranja Pedal -#F39A2B - Destacados y botones secundarios
+
+Azul Noche - #14213D - Títulos y encabezado
+
+Crema - #FAF6EF - Fondo general
+
+Gris Asfalto - #5B6470 - Texto secundario*/
+
+/* Estilo general del encabezado*/
+
+#Header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 15px 30px;
+}
+
+/*Logo y titulo */
+#Header > a,
+#Header h1 {
+    display: inline-flex;
+    align-items: center;
+    margin: 0%;
+}
+
+/* Ajustes para el logo */
+#Header img {
+    max-width: 80px;
+    height: auto;
+    display: block;
+}
+
+#Header h1 {
+    font-size: 2rem;
+    margin-left: 15px;
+}
+
+#solicitud{
+    margin-left: auto;
+}
+/* Menú de navegación*/
+#Header nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+#Header nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+#Header nav a:hover {
+    color: #007bff;
+}
