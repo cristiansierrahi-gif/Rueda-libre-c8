@@ -11,145 +11,142 @@
 <body>
     <!--Header con titulo y secmento de barra nav-->
     <header id="Header">
-        <a href="../index.html"><img src="../img/logos/Logo.png" alt="Logo" width="100" height="100"></a>
-        <h1><a href="../index.html">Rueda Libre</a></h1>
-        <p>El mejor espacio para conseguir alquiler de bicicletas de alta calidad en el área metropolitana</p>
+        <div class="logo-container">
+            <a href="../index.html">
+                <img src="../img/logos/Logo.png" alt="Logo Rueda Libre"></a>
+            <h1><a href="../index.html">Rueda Libre</a></h1>
+        </div>
+
         <!--Lista de enlaces-->
-        <nav>
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
+        <nav id="solicitud">
+            <!-- Botón de las tres líneas (Menú Hamburguesa) -->
+            <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+            <ul class="menu-principal">
+                <!-- Menú desplegable para Inicio -->
+                <li class="dropdown">
+                    <a href="../index.html">Inicio</a>
+                    <ul class="dropdown-content">
+                        <li><a href="../index.html#somos">¿Quiénes somos?</a></li>
+                        <li><a href="#Beneficios">Beneficios</a></li>
+                        <li><a href="#como">¿Cómo alquilar?</a></li>
+                        <li><a href="#encuentranos">Encuéntranos</a></li>
+                    </ul>
+                </li>
+                <!-- Enlaces principales afuera del desplegable -->
                 <li><a href="tarifas.html">Tarifas y rutas</a></li>
                 <li><a href="reserva.html">Reservas</a></li>
             </ul>
         </nav>
-        <hr>
     </header>
 
+<main id="cuerpo">
+        <!-- Tarjeta de Horarios de Atención -->
+        <article class="card" id="horario">
+            <h2 tabindex="0">Reserva de bicicleta</h2>
+            <p>Para solicitar el alquiler de tu bicicleta, llena este formulario. Recuerda solicitarlo en nuestros horarios de atención:</p>
+            
+            <aside class="horarios-box">
+                <dl>
+                    <dt>Horario de atención: <strong>Lunes a Viernes</strong></dt>
+                    <dd>Desde las 7:00 a. m. hasta las 7:00 p. m.</dd>
+                    <dt>Horario de atención: <strong>Sábados, Domingos y Festivos:</strong></dt>
+                    <dd>Desde las 6:00 a. m. hasta las 2:00 p. m.</dd>
+                </dl>
+            </aside>
+        </article>
 
-    <main id="horario">
-        <h2 tabindex="0">Reserva de bicicleta.</h2>
-        <h2>Reserva de bicicleta.</h2>
-
-        <p>Para solicitar el alquiler de tu bicicleta, debes llenar este formulario, recuerda solicitarlo en
-            nuestros
-            horarios de atención:</p>
-        <aside>
-            <dl>
-                <dt>Horario de atención: <strong>Lunes a Viernes</strong></dt>
-                <dd>Desde las 7 am.</dd>
-                <dd>Hasta las 7 pm.</dd>
-                <dt>Horario de atención: <strong>Sabados, Domingos y Festivos:</strong></dt>
-                <dd>Desde las 6:00 a. m</dd>
-                <dd>Hasta las 2:00 p. m.</dd>
-            </dl>
-        </aside>
-
-        <!--Formulario-->
-        <section id="Formulario">
-            <h2 tabindex="0">Formulario de reserva"</h2>
+        <!-- Tarjeta del Formulario -->
+        <section class="card" id="Formulario">
+            <h2 tabindex="0">Formulario de reserva</h2>
+            
             <form action="#" method="post">
-                <!--Campo Tus Datos-->
-                <fieldset>
+                <!-- Campo 1: Tus Datos -->
+                <fieldset class="form-fieldset">
                     <legend>Tus Datos</legend>
-                    <p>
-                        <!--Nombre-->
+                    <div class="form-group">
                         <label for="nombre">Nombre Completo</label>
-                        <input type="text" id="nombre" name="nombre" required minlength="3" required>
-                    </p>
-                    <p>
-                        <!--Documento-->
+                        <input type="text" id="nombre" name="nombre" required minlength="3" placeholder="Ej. Juan Pérez">
+                    </div>
+                    <div class="form-group">
                         <label for="tipo-documento">Tipo de Documento</label>
                         <select name="tipo-documento" id="tipo-documento" required>
                             <option value="" disabled selected>Selecciona una opción</option>
-                            <option value="ce">Cédula de ciudadanía</option>
+                            <option value="cc">Cédula de ciudadanía</option>
                             <option value="ce">Cédula de extranjería</option>
-                            <option value="pasaporte ">Pasaporte</option>
+                            <option value="pasaporte">Pasaporte</option>
                             <option value="ti">Tarjeta de identidad</option>
                         </select>
-                    </p>
-                    <label for="numero-documento">Numero de Documento</label>
-                    <input type="text" id="numero-documento" name="numero-documento" required maxlength="10" required>
-                    </p>
-                    <p>
-                        <!--Correo-->
-                        <label for="correo">Correo Electronico</label>
-                        <input type="email" id="correo" name="correo" required>
-                    </p>
-                    <p>
-                        <label for="telefono">Celular (10 digitos)</label>
-                        <input type="tel" id="telefono" name="telefono" pattern="[0-9]{10}" maxlength="10" required>
-                    </p>
+                    </div>
+                    <div class="form-group">
+                        <label for="numero-documento">Número de Documento</label>
+                        <input type="text" id="numero-documento" name="numero-documento" required maxlength="10" placeholder="Sin puntos ni espacios">
+                    </div>
+                    <div class="form-group">
+                        <label for="correo">Correo Electrónico</label>
+                        <input type="email" id="correo" name="correo" required placeholder="correo@ejemplo.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Celular (10 dígitos)</label>
+                        <input type="tel" id="telefono" name="telefono" pattern="[0-9]{10}" maxlength="10" required placeholder="3001234567">
+                    </div>
                 </fieldset>
 
-                <!--Campo Tu Alquiler-->
-                <fieldset>
-                    <legend>Tu Alquiller</legend>
-                    <p>
-                        <!--Fecha-->
+                <!-- Campo 2: Tu Alquiler -->
+                <fieldset class="form-fieldset">
+                    <legend>Tu Alquiler</legend>
+                    <div class="form-group">
                         <label for="fecha-reserva">Fecha de reserva:</label>
                         <input type="date" id="fecha-reserva" name="fecha-reserva" min="2026-11-01" max="2026-12-31">
-                    </p>
-                    <p>
-                        <!--Tipo de bicicleta y plan-->
-                        <!--Bicicletas-->
+                    </div>
+                    <div class="form-group">
                         <label for="tipo-alquiler">Selecciona tu bicicleta</label>
                         <select name="tipo-alquiler" id="tipo-alquiler" required>
                             <option value="" disabled selected>Selecciona una opción</option>
                             <option value="urbana">Urbana</option>
-                            <option value="">Montaña</option>
-                            <option value="">Eléctrica </option>
-                            <lab for="horas">Selecciona tu alquiler</lab>
+                            <option value="montana">Montaña</option>
+                            <option value="electrica">Eléctrica</option>
                         </select>
-                    </p>
-                    <p>
-                        <!--Plan-->
+                    </div>
+                    <div class="form-group">
                         <label for="tipo-plan">Selecciona el plan</label>
                         <select name="tipo-plan" id="tipo-plan" required>
-                            <option value="" disabled selected>Selecciona una opcion</option>
-                            <option value="no-aplica">No aplica</option>
+                            <option value="" disabled selected>Selecciona una opción</option>
+                            <option value="no-aplica">No aplica (Libre)</option>
                             <option value="rio">Río y Parques</option>
                             <option value="sabores">Sabores de Barrio</option>
                             <option value="reto">Reto Las Palmas</option>
                         </select>
-                    </p>
-                    <p>
-                        <!--Cantidad-->
+                    </div>
+                    <div class="form-group">
                         <label for="cantidad">Cantidad (entre 1 y 6):</label>
-                        <input type="tel" id="cantidad" name="cantidad" pattern="[1-6]{1}" maxlength="1">
-                    </p>
-                        <input type="text" id="correo" name="correo" required>
-                    </p>
-                    <p>
-                        <label for="telefono">Celular (10 digitos)</label>
-                        <input type="tel" id="telefono" name="telefono" pattern="[0-9]{10}">
-                    </p>
+                        <input type="number" id="cantidad" name="cantidad" min="1" max="6" value="1" required>
+                    </div>
                 </fieldset>
-                <!--Campo Tu Alquiler-->
-                <fieldset>
-                    <legend>Tu Alquiller</legend>
->>>>>>> 8c70d658512aee3ce0f2aca4f65bb03be1f578f8
-                </fieldset>
-                <!--Campo Confirmación-->
-                <fieldset>
+
+                <!-- Campo 3: Confirmación -->
+                <fieldset class="form-fieldset">
                     <legend>Confirmación</legend>
-                    <p>
+                    <div class="form-group">
                         <label for="comentarios">Comentarios (Opcionales)</label>
-                        <input type="text" id="comentarios" name="comentarios" maxlength="300">
+                        <textarea id="comentarios" name="comentarios" maxlength="300" rows="3" placeholder="Observaciones adicionales..."></textarea>
+                    </div>
+                    <div class="form-group checkbox-group">
                         <label>
-                    </p>
-                    <p>
                             <input type="checkbox" name="politicas" required>
-                            Acepto los <a href="politicas.html" target="_blank" rel="noopener noreferrer">términos y
-                                condiciones</a> del servicio.
+                            Acepto los <a href="politicas.html" target="_blank" rel="noopener noreferrer">términos y condiciones</a> del servicio.
                         </label>
-                    </p>
+                    </div>
                 </fieldset>
-                <p><button type="submit">Enviar mensaje</button></p>
+
+                <div class="form-action">
+                    <button type="submit" class="btn-reserva">Enviar solicitud de reserva</button>
+                </div>
             </form>
         </section>
     </main>
-    <hr>
-    <footer>
+
+    <!--Pie de pagina-->
+    <footer id="pie-pagina">
         <address>
             Rueda Libre - 2026 <br>
             Correo electronico <a href="mailto:hola@ruedalibre.example" target="_blank"

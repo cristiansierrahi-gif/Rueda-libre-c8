@@ -1,61 +1,759 @@
-/*Verde Ruta #1E7A4F Botones y enlaces
+:root {
+    --verde-ruta: #1E7A4F;
+    --naranja-pedal: #F39A2B;
+    --azul-noche: #14213D;
+    --crema: #FAF6EF;
+    --gris-asfalto: #5B6470;
+}
 
-Naranja Pedal -#F39A2B - Destacados y botones secundarios
+/* ==========================================
+    1. CONFIGURACIÓN GENERAL Y TIPOGRAFÍA FLUIDA
+   ========================================== */
 
-Azul Noche - #14213D - Títulos y encabezado
+/*Efecto para scroll*/
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
 
-Crema - #FAF6EF - Fondo general
+/* Tipografía global para el cuerpo de la página */
+body {
+    font-family: sans-serif;
+    color: var(--gris-asfalto);
+    margin: 0;
+    padding: 20px clamp (15px, 4vw, 40px);
+}
 
-Gris Asfalto - #5B6470 - Texto secundario*/
+/* Tipografía de Montserrat exclusivamente para los títulos */
+h1,
+h2,
+h3 {
+    font-family: "Montserrat", sans-serif;
+    color: var(--azul-noche);
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
 
-/* Estilo general del encabezado*/
+h1 {
+    font-size: clamp (1.8rem, 2.5vw + 1rem, 2.5rem);
+    margin: 0;
+}
+
+h2 {
+    font-size: clamp(1.4rem, 2vw + 0.8rem, 2rem);
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: clamp(1.4rem, 2vw + 0.8rem, 2rem);
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: clamp(0.95rem, 1vw + 0.5rem, 1.1rem);
+    margin-bottom: 15px;
+}
 
 #Header {
+    background-color: var(--crema);
+}
+
+#Header h1 a {
+    text-decoration: none;
+    color: var(--verde-ruta);
+}
+
+#cuerpo {
+    background-color: var(--crema);
+}
+
+a {
+    color: var(--verde-ruta)
+}
+
+a:hover {
+    color: var(--naranja-pedal)
+}
+
+/* ==========================================
+    2. ENCABEZADO (HEADER) Y NAVEGACIÓN
+   ========================================== */
+
+#Header {
+    position: sticky;
+    top: 0; /* Queda flotando suavemente arriba */
+    z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 15px 30px;
+    background-color: #ffffff; /* Fondo blanco compacto tipo tarjeta */
+    padding: 15px 40px; /* Relleno compacto para que no sea incómodo */
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(20, 33, 61, 0.08); /* Sombra suave de flotación */
+    margin-bottom: 20px;
 }
 
-/*Logo y titulo */
-#Header > a,
 #Header h1 {
-    display: inline-flex;
-    align-items: center;
-    margin: 0%;
+    font-family: "Monserrat", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
 }
 
-/* Ajustes para el logo */
-#Header img {
-    max-width: 80px;
+/*Alinea el logo completamente a la izquierda */
+.logo-container {
+    display: flex;
+    align-items: center;
+    /* Pone el logo y el h1 estrictamente lado a lado */
+    gap: 12px;
+}
+
+.logo-container img{
+    width: 65px;
     height: auto;
     display: block;
 }
-
-#Header h1 {
-    font-size: 2rem;
-    margin-left: 15px;
+/*Alinea el menú de navegación completamente a la derecha */
+#solicitud {
+    display: flex;
+    align-items: center;
 }
 
-#solicitud{
-    margin-left: auto;
-}
-/* Menú de navegación*/
-#Header nav ul {
+/* Converte la lista en una fila horizontal y elimina los puntos de lista */
+#solicitud ul.menu-principal {
     display: flex;
     list-style: none;
+    align-items: center;
+    gap: 30px;
     margin: 0;
     padding: 0;
-    gap: 20px;
 }
 
-#Header nav a {
-    text-decoration: none;
-    color: #333;
+/* Oculta el botón de hamburguesa por defecto en pantallas grandes */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #14213D
+}
+
+/* Estilo de los textos */
+#solicitud a {
     font-weight: bold;
+    text-decoration: none;
 }
 
-#Header nav a:hover {
-    color: #007bff;
+#solicitud .dropdown {
+    position: relative;
+    padding-bottom: 5px;
+}
+
+#solicitud .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--crema);
+    box-shadow: 0px 4px 12px var(--azul-noche);
+    list-style: none;
+    padding: 10px 0;
+    min-width: 200px;
+    border-radius: 6px;
+    z-index: 100;
+    flex-direction: column;
+}
+
+#solicitud .dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+}
+
+#solicitud .dropdown-content li {
+    width: 100%;
+}
+
+#solicitud .dropdown-content li a {
+    padding: 10px 15px;
+    display: block;
+    color: var(--azul-noche);
+    font-weight: normal;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+#solicitud .dropdown-content li a:hover {
+    background-color: var(--crema);
+    color: var(--naranja-pedal);
+}
+
+/* ==========================================
+    ESTILOS DE PANTALLA GRANDE (DESKTOP)
+   ========================================== */
+
+#solicitud ul.menu-principal {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-toggle {
+    display: none; /* En computador NO se muestra la hamburguesa */
+}
+/* ==========================================================
+    DISEÑO RESPONSIVO (Cuando la pantalla es menor a 768px)
+   ========================================================== */
+
+@media (max-width: 768px) {
+    /* Muestra únicamente la hamburguesa en pantallas pequeñas */
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 1.8rem;
+        cursor: pointer;
+        color: var(--azul-noche);
+    }
+
+    /* Oculta la lista principal hasta que se haga clic en la hamburguesa */
+    #solicitud ul.menu-principal {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 20px;
+        background-color: #ffffff;
+        padding: 15px;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+        border-radius: 8px;
+        z-index: 99;
+    }
+
+    /* Cuando JavaScript le agregue la clase 'activo', se muestra */
+    #solicitud ul.menu-principal.activo {
+        display: flex;
+    }
+}
+
+/* ==========================================
+    3. CUERPO Y CARDS
+   ========================================== */
+
+/* ==========================================
+    BANNER PRINCIPAL (AJUSTADO AL BORD)
+   ========================================== */
+.hero-container {
+    width: 100%;
+    max-height: 380px; /* Controla la altura para no ocupar toda la pantalla */
+    overflow: hidden;
+    border-radius: 14px;
+    box-shadow: 0px 4px 15px var(--azul-noche);
+    margin-bottom: 30px;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    max-height: 380px;
+    object-fit: cover; /* Recorta la imagen limpiamente sin deformarla */
+    display: block;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0;
+    padding: 10px 10 30px 10px;
+    background-color: var(--crema);
+}
+#cuerpo {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Espacio entre sección y sección */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* 2. Banner de la imagen principal para que ocupe todo el ancho y no deje huecos */
+.hero-imagen, #Header + p img, header + img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+    border-radius: 12px;
+    display: block;
+    margin: 20px 0;
+}
+/* Diseño de tarjeta para cada sección */
+.card {
+    background-color: #ffffff;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 20px var(--azul-noche);
+    border: 1px solid #ffffff;
+}
+
+/* Títulos dentro de las tarjetas */
+.card h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--azul-noche);
+    font-size: 1.6rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* Textos generales y listas dentro de las tarjetas */
+.card p {
+    color: var(--gris-asfalto);
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.card ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.card li {
+    color: var(--gris-asfalto);
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.hero-container, #cuerpo {
+    padding: 0 30px; /* Margen seguro para las tarjetas y el banner inferiores */
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ==========================================
+    Botones de Pestañas (Tabs)
+   ========================================== */
+
+.tab-buttons{
+    display: flex;
+    gap: 12px;
+    margin-bottom: 25px;
+    border-bottom: 2px solid var(--crema);
+    padding-bottom: 12px;
+}
+
+.tab-btn{
+    background-color: #FAF6EF;
+    border: 1px solid #E5DFD3;
+    color: var(--gris-asfalto);
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.25s ease;
+}
+
+.tab-btn:hover {
+    background-color: #ffffff;
+    border-color: var(--verde-ruta);
+    color: var(--verde-ruta);
+}
+
+.tab-btn.active {
+    background-color: var(--verde-ruta);
+    color: #ffffff;
+    border-color: var(--verde-ruta);
+    box-shadow: 0px 4px 12px rgba(30, 122, 79, 0.25);
+}
+
+/* Paneles de Contenido */
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+    animation: fadeInUp 0.35s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Grid y Tarjetas de Pasos */
+.steps-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.step-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    background-color: #FAF6EF;
+    border: 1px solid #E5DFD3;
+    border-radius: 12px;
+    padding: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.step-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 16px rgba(20, 33, 61, 0.08);
+    background-color: #ffffff;
+}
+
+/* Insignias Numéricas Circulares */
+.step-badge {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 1.1rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.step-badge.virtual {
+    background-color: var(--verde-ruta);
+    box-shadow: 0px 3px 8px rgba(30, 122, 79, 0.3);
+}
+
+.step-badge.presencial {
+    background-color: var(--naranja-pedal);
+    box-shadow: 0px 3px 8px rgba(243, 154, 43, 0.3);
+}
+
+/* Contenido del Paso */
+.step-content h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--azul-noche);
+    font-size: 1.1rem;
+    margin: 0 0 6px 0;
+}
+
+.step-content p {
+    color: var(--gris-asfalto);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* ==========================================
+    4. PIE DE PAGINA
+   ========================================== */
+
+/* Contenedor general del pie de página */
+#pie-pagina{
+    width: 100%;
+    background-color: #ffff;
+    margin-top: 50px;
+    padding: 30px 40px;
+    box-shadow: 0px -4px 15 var(--azul-noche);
+    border-top: 1px solid #E5DFD3;
+}
+
+/* ==========================================
+    4. Tablas
+   ========================================== */
+
+/* Contenedor que permite desplazarse horizontalmente en móviles si la tabla es ancha */
+.tabla-contenedor {
+    width: 100%;
+    overflow-x: auto;
+    margin: 20px 0;
+    border-radius: 10px;
+    border: 1px solid #E5DFD3;
+}
+
+/* Estilo base de la tabla */
+.tabla-tarifas {
+    width: 100%;
+    border-collapse: collapse; /* Elimina dobles bordes entre celdas */
+    font-family: 'Open Sans', sans-serif;
+    text-align: left;
+    background-color: #ffffff;
+}
+
+/* Encabezado de la tabla */
+.tabla-tarifas thead tr {
+    background-color: #14213D; /* Azul Noche corporativo */
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+}
+
+.tabla-tarifas th, 
+.tabla-tarifas td {
+    padding: 14px 18px; /* Espaciado interno amplio para que los números respiren */
+}
+
+/* Líneas divisorias y efecto de filas alternadas */
+.tabla-tarifas tbody tr {
+    border-bottom: 1px solid #E5DFD3;
+    color: #5B6470;
+    font-size: 0.95rem;
+    transition: background-color 0.2s ease;
+}
+
+.tabla-tarifas tbody tr:nth-of-type(even) {
+    background-color: #FAF6EF; /* Tono crema suave para filas pares */
+}
+
+.tabla-tarifas tbody tr:hover {
+    background-color: #F4EFE6; /* Resaltado sutil al pasar el mouse */
+}
+
+/* Insignias de Nivel de Dificultad */
+.badge-nivel {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.82rem;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.badge-nivel.facil {
+    background-color: #E8F5E9;
+    color: #1E7A4F; /* Verde */
+}
+
+.badge-nivel.medio {
+    background-color: #FFF3E0;
+    color: #F39A2B; /* Naranja */
+}
+
+.badge-nivel.dificil {
+    background-color: #FFEBEE;
+    color: #D32F2F; /* Rojo */
+}
+
+/* Botones de acción inferiores */
+.card-action {
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-reserva {
+    background-color: #1E7A4F; /* Verde Ruta */
+    color: #ffffff;
+    padding: 11px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: all 0.25s ease;
+    box-shadow: 0px 3px 10px rgba(30, 122, 79, 0.2);
+}
+
+.btn-reserva:hover {
+    background-color: #165B3B;
+    transform: translateY(-2px);
+    box-shadow: 0px 5px 14px rgba(30, 122, 79, 0.3);
+}
+
+.btn-reserva.btn-naranja {
+    background-color: #F39A2B; /* Naranja Pedal */
+    box-shadow: 0px 3px 10px rgba(243, 154, 43, 0.2);
+}
+
+.btn-reserva.btn-naranja:hover {
+    background-color: #D98218;
+}
+
+/* ==========================================
+   ESTILOS PARA EL FORMULARIO DE RESERVA
+   ========================================== */
+
+/* Bloque de Horarios de Atención */
+.horarios-box {
+    background-color: #FAF6EF; /* Fondo crema suave */
+    border: 1px solid #E5DFD3;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-top: 15px;
+}
+
+.horarios-box dl {
+    margin: 0;
+}
+
+.horarios-box dt {
+    font-family: 'Montserrat', sans-serif;
+    color: #14213D; /* Azul Noche */
+    font-size: 0.95rem;
+    margin-top: 10px;
+}
+
+.horarios-box dt:first-child {
+    margin-top: 0;
+}
+
+.horarios-box dd {
+    margin: 4px 0 0 0;
+    color: #5B6470; /* Gris Asfalto */
+    font-size: 0.9rem;
+}
+
+/* Agrupaciones del Formulario (Fieldsets) */
+.form-fieldset {
+    border: 1px solid #E5DFD3;
+    border-radius: 10px;
+    padding: 22px 24px;
+    margin-bottom: 25px;
+    background-color: #ffffff;
+}
+
+.form-fieldset legend {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: #14213D; /* Azul Noche */
+    padding: 0 10px;
+    background-color: #ffffff;
+}
+
+/* Campos individuales (Grupos de Label + Input/Select/Textarea) */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 18px;
+}
+
+.form-group:last-child {
+    margin-bottom: 0;
+}
+
+.form-group label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #14213D;
+}
+
+/* Estilos unificados para Inputs, Selects y Textarea */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="date"],
+.form-group input[type="number"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1px solid #E5DFD3;
+    border-radius: 8px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.95rem;
+    color: #14213D;
+    background-color: #FAF6EF;
+    transition: all 0.25s ease;
+    box-sizing: border-box;
+}
+
+/* Efecto al seleccionar/hacer foco en un campo */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #1E7A4F; /* Verde Ruta */
+    background-color: #ffffff;
+    box-shadow: 0px 0px 0px 3px rgba(30, 122, 79, 0.15);
+}
+
+/* Placeholder discreto */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #A0A5AC;
+    font-size: 0.88rem;
+}
+
+/* Ajustes especiales para Textarea */
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Casilla de Verificación (Checkbox) */
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    color: #5B6470;
+    font-size: 0.92rem;
+    cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #1E7A4F; /* Verde Ruta para la casilla seleccionada */
+    cursor: pointer;
+}
+
+.checkbox-group a {
+    color: #1E7A4F;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.checkbox-group a:hover {
+    color: #F39A2B; /* Naranja Pedal */
+    text-decoration: underline;
+}
+
+/* Botón de envío */
+.form-action {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.form-action .btn-reserva {
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* ==========================================
+    DISEÑO RESPONSIVO PARA EL FORMULARIO
+   ========================================== */
+@media (max-width: 768px) {
+    .form-fieldset {
+        padding: 16px 18px;
+    }
+
+    .form-action {
+        justify-content: stretch;
+    }
+
+    .form-action .btn-reserva {
+        width: 100%;
+        text-align: center;
+    }
 }

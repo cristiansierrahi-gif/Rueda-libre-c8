@@ -10,25 +10,38 @@
 </head>
 
 <body>
-    <!-- Header con título y sección de barra nav -->
+    <!--Header con titulo y secmento de barra nav-->
     <header id="Header">
-        <a href="../index.html"><img src="../img/logos/Logo.png" alt="Logo de Rueda Libre" width="100" height="100"></a>
-        <h1><a href="../index.html">Rueda Libre</a></h1>
-        <p>El mejor espacio para conseguir alquiler de bicicletas de alta calidad en el área metropolitana</p>
-        <!-- Lista de enlaces -->
-        <nav>
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
+        <div class="logo-container">
+            <a href="../index.html">
+                <img src="../img/logos/Logo.png" alt="Logo Rueda Libre"></a>
+            <h1><a href="../index.html">Rueda Libre</a></h1>
+        </div>
+
+        <!--Lista de enlaces-->
+        <nav id="solicitud">
+            <!-- Botón de las tres líneas (Menú Hamburguesa) -->
+            <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+            <ul class="menu-principal">
+                <!-- Menú desplegable para Inicio -->
+                <li class="dropdown">
+                    <a href="../index.html">Inicio</a>
+                    <ul class="dropdown-content">
+                        <li><a href="../index.html#somos">¿Quiénes somos?</a></li>
+                        <li><a href="#Beneficios">Beneficios</a></li>
+                        <li><a href="#como">¿Cómo alquilar?</a></li>
+                        <li><a href="#encuentranos">Encuéntranos</a></li>
+                    </ul>
+                </li>
+                <!-- Enlaces principales afuera del desplegable -->
                 <li><a href="tarifas.html">Tarifas y rutas</a></li>
                 <li><a href="reserva.html">Reservas</a></li>
-                <li><a href="politicas.html">Políticas</a></li>
             </ul>
         </nav>
-        <hr>
     </header>
 
     <!-- Contenido Principal -->
-    <main id="Politicas">
+    <main id="cuerpo">
         <h2 tabindex="0">Políticas y Condiciones de Alquiler</h2>
         <p>En <strong>Rueda Libre</strong> fomentamos la movilidad sostenible y el uso de la bicicleta en la ciudad. Para garantizar una experiencia segura, ordenada y de alta calidad para todos nuestros usuarios, establecemos las siguientes políticas de arrendamiento:</p>
 

@@ -9,206 +9,238 @@
         content="Rueda Libre es una empresa que fomenta para la movilidad sostenible y el uso de bicicletas en la ciudad por medio del modelo de alquiler.">
     <meta name="author" content="Nodo Digital">
     <title>Rueda Libre | Alquiler de bicicletas en Medellín</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
     <!--Header con titulo y secmento de barra nav-->
     <header id="Header">
-        <a href="index.html"><img src="img/logos/Logo.png" alt="Logo" width="100" height="100"></a>
-        <h1><a href="index.html">Rueda Libre</a></h1>
-        <p>El mejor espacio para conseguir alquiler de bicicletas de alta calidad en el área metropolitana</p>
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="img/logos/Logo.png" alt="Logo Rueda Libre"></a>
+            <h1><a href="index.html">Rueda Libre</a></h1>
+        </div>
+
 
         <!--Lista de enlaces-->
         <nav id="solicitud">
-        <ul>
-            <li><a href="#cuerpo">Inicio</a></li>
-            <li><a href="paginas/tarifas.html">Tarifas y rutas</a></li>
-            <li><a href="paginas/reserva.html">Reservas</a></li>
-        </ul>
-        <!--Nav de navegacion-->
-        
-            <p><a href="#somos">¿Quienes somos?</a> <a href="#servicios">Nuestros servicios</a> <a href="#como">¿Como
-                    alquilar?</a> <a href="paginas/tarifas.html#alquiler">Alquiler</a> <a
-                    href="#recorridos">Recorridos</a> <a href="#encuentranos">Encuentranos</a></p>
+            <!-- Botón de las tres líneas (Menú Hamburguesa) -->
+            <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+            <ul class="menu-principal">
+                <!-- Menú desplegable para Inicio -->
+                <li class="dropdown">
+                    <a href="index.html">Inicio</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#somos">¿Quiénes somos?</a></li>
+                        <li><a href="#Beneficios">Beneficios</a></li>
+                        <li><a href="#como">¿Cómo alquilar?</a></li>
+                        <li><a href="#encuentranos">Encuéntranos</a></li>
+                    </ul>
+                </li>
+                <!-- Enlaces principales afuera del desplegable -->
+                <li><a href="paginas/tarifas.html">Tarifas y rutas</a></li>
+                <li><a href="paginas/reserva.html">Reservas</a></li>
+            </ul>
         </nav>
     </header>
 
     <!--Contenido principal y único de la página -->
     <main id="cuerpo">
+        <!--Margen-->
+        <div class="hero-container"></div>
         <!--Banner publicitario 1 -->
-        <img src="img/Recursos/banner.png" alt="Bicicleta de alquiler" width="1000" height="500">
+        <img src="img/Recursos/banner.png" alt="Bicicleta de alquiler" class="hero-img">
 
         <!--Bloque Quienes somos-->
-        <header id="somos">
+        <article class="card" id="somos">
             <h2 tabindex="0">¿Quienes somos?</h2>
-            <p>Somo una empresa Colombiana que busca mejorar el sistema de movilidad del área metropolitana por
-                medio del
-                <strong>alquiler de bicicletas.</strong><br>
-                Contamos con gran variedad de bicicletas y de distintos deportes para que puedas moverte de la forma que
-                mas
-                te guste.
+            <p>Somos una empresa colombiana comprometida con transformar la movilidad del área metropolitana a través
+                del alquiler de bicicletas. Ofrecemos una amplia variedad de modelos y opciones deportivas para que te
+                muevas por la ciudad como más te guste y disfrutes cada recorrido.
             </p>
-        </header>
+        </article>
 
         <!--Bloque Alquiler-->
-        <article id="alquiler">
-            <h2 tabindex="0">Alquiler de bicicletas</h2>
-            <p>Contamos con bicicletas de ciudad, electricas y montaña. Todas estas cuentan con <strong>candado y
-                    casco</strong>.</p>
-            <h3 tabindex="0">Solicita tu alquiler</h3>
-            <table>
-                <thead>
-                    <!--Titulo de la tabla-->
-                    <tr>
-                        <th>Virtual</th>
-                        <th>Presencial</th>
-                    </tr>
-                </thead>
-                <!--Cuerpo de la tabla-->
-                <tbody>
-                    <tr>
-                        <td>
-                            <ol> <!--Virtual-->
-                                <li><strong>Registro y Verificación de Usuario:</strong>
-                                    <p>Crea una cuenta en la plataforma ingresando tus datos personales (nombre,
-                                        correo y teléfono) y sube una fotografía de tu documento de identidad para
-                                        validar tu perfil.</p>
-                                </li>
-                                <li><strong>Selección del Módulo y Tipo de Bicicleta:</strong>
-                                    <p>Navega por el catálogo, elige la bicicleta que mejor se adapte a tus
-                                        necesidades (urbana, eléctrica, de montaña) y selecciona la estación de
-                                        recogida o la opción de entrega a domicilio.</p>
-                                </li>
-                                <li><strong>Configuración de Fechas y Horarios:</strong>
-                                    <p>Indica en el calendario interactivo el día y la hora exacta de inicio de la
-                                        reserva, así como la duración estimada del alquiler (horas, días o semanas).
-                                    </p>
-                                </li>
-                                <li><strong>Pago y Depósito de Garantía:</strong>
-                                    <p>Introduce tu método de pago preferido (tarjeta de crédito/débito o billetera
-                                        digital) para abonar la tarifa del servicio y autorizar la retención
-                                        temporal del depósito de seguridad.</p>
-                                </li>
-                                <li><strong>Confirmación y Código de Desbloqueo:</strong>
-                                    <p>Recibe el comprobante digital con la confirmación de la reserva y un código
-                                        QR (o PIN numérico) que utilizarás para retirar la bicicleta en la estación
-                                        seleccionada.</p>
-                                </li>
-                            </ol>
-                        </td>
-                        <td>
-                            <ol> <!--Presencial-->
-                                <li><strong>Acreditación en Ventanilla:</strong>
-                                    <p>Acércate al módulo de atención y presenta tu documento de identidad original
-                                        para que el encargado verifique tus datos en el sistema.</p>
-                                </li>
-                                <li><strong>Elección y Inspección de la Bicicleta:</strong>
-                                    <p>Selecciona el modelo disponible en el punto de atención y realiza una breve
-                                        inspección física junto al personal para verificar que los frenos, llantas y
-                                        luces estén en buen estado.</p>
-                                </li>
-                                <li><strong>Acuerdo de Horarios y Servicios Extra:</strong>
-                                    <p>Define la cantidad de tiempo que usaremos la bicicleta e indica si requieres
-                                        accesorios adicionales (como casco, candado de alta seguridad o
-                                        portaequipaje).</p>
-                                </li>
-                                <li><strong>Firma de Contrato y Pago:</strong>
-                                    <p>Firma el formulario físico (o firma digital en tablet) con los términos y
-                                        condiciones del servicio, y realiza el pago en efectivo o con datáfono.</p>
-                                </li>
-                                <li><strong>Entrega e Instrucciones de Uso:</strong>
-                                    <p>Recibe la bicicleta junto con las llaves del candado y una breve explicación
-                                        sobre las normas de circulación y los puntos autorizados de devolución.</p>
-                                </li>
-                            </ol>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+        <article class="card" id="como">
+            <h2 tabindex="0">¿Cómo alquilar?</h2>
+            <p>Alquilar tu bicicleta es muy sencillo. Ten en cuenta los siguientes requisitos antes de tu reserva:</p>
+            <ul>
+                <li><strong>Edad mínima:</strong> Debes ser mayor de edad. Los menores de edad pueden disfrutar del
+                    servicio siempre que vayan acompañados por un adulto responsable.</li>
+                <li><strong>Documento de identidad:</strong> Presentar tu cédula original.</li>
+                <li><strong>Respaldo:</strong> Se requiere un codeudor para respaldar la reposición o reparación en caso
+                    de daño parcial, pérdida o extravío sin justificación.</li>
+            </ul>
+            <!--Menu de pestanas-->
+            <section>
+                <div class="section-cabecera">
+            </section>
+            <h3 tabindex="0">Solicita tu reserva:</h3>
+            <p>Queremos que tu experiencia sea cómoda y ágil desde el primer paso. Por eso, te ofrecemos dos opciones
+                sencillas para gestionar la reserva de tus bicicletas y elegir las rutas que prefieras:</p>
+            </div>
+            <!-- Selector de pestañas -->
+            <!-- Selector de pestañas -->
+            <div class="tab-buttons">
+                <button class="tab-btn active" onclick="switchTab(event, 'tab-virtual')">
+                    <span>💻</span> Reserva Virtual
+                </button>
+                <button class="tab-btn" onclick="switchTab(event, 'tab-presencial')">
+                    <span>🏢</span> Reserva Presencial
+                </button>
+            </div>
+
+            <!-- Pestaña 1: Reserva Virtual -->
+            <div id="tab-virtual" class="tab-pane active">
+                <div class="steps-grid">
+                    <div class="step-item">
+                        <div class="step-badge virtual">1</div>
+                        <div class="step-content">
+                            <h3>Ingreso de Datos Personales</h3>
+                            <p>Diligencia la sección "Tus Datos" ingresando tu Nombre Completo, Tipo y Número de
+                                Documento, Correo Electrónico y número de Celular (10 dígitos) para registrar la reserva
+                                a tu nombre.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-badge virtual">2</div>
+                        <div class="step-content">
+                            <h3>Selección de Alquiler y Bicicleta</h3>
+                            <p>En la sección "Tu Alquiler", selecciona la fecha exacta de tu reserva en el calendario,
+                                elige el modelo de bicicleta que prefieras y selecciona el plan al que te gustaría
+                                asistir.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-badge virtual">3</div>
+                        <div class="step-content">
+                            <h3>Cantidad y Datos de Contacto</h3>
+                            <p>Indica la cantidad de bicicletas a alquilar (entre 1 y 6) y proporciona los datos
+                                adicionales de contacto requeridos en la sección para validar el pedido.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-badge virtual">4</div>
+                        <div class="step-content">
+                            <h3>Confirmación y Aceptación de Términos</h3>
+                            <p>En la sección "Confirmación", añade observaciones o comentarios opcionales si lo deseas,
+                                marca la casilla indicando que aceptas los términos y condiciones del servicio y envía
+                                el formulario.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pestaña 2: Reserva Presencial -->
+            <div id="tab-presencial" class="tab-pane">
+                <div class="steps-grid">
+                    <div class="step-item">
+                        <div class="step-badge presencial">1</div>
+                        <div class="step-content">
+                            <h3>Acreditación en Ventanilla</h3>
+                            <p>Acércate al módulo de atención y presenta tu documento de identidad original para que el
+                                encargado verifique tus datos en el sistema.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-badge presencial">2</div>
+                        <div class="step-content">
+                            <h3>Elección e Inspección de la Bicicleta</h3>
+                            <p>Selecciona el modelo disponible en el punto de atención y realiza una breve inspección
+                                física junto al personal para verificar que los frenos, llantas y luces estén en buen
+                                estado.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-badge presencial">3</div>
+                        <div class="step-content">
+                            <h3>Acuerdo de Horarios y Servicios Extra</h3>
+                            <p>Define la cantidad de tiempo que usaremos la bicicleta e indica si requieres accesorios
+                                adicionales (como casco, candado de alta seguridad o portaequipaje).</p>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-badge presencial">4</div>
+                        <div class="step-content">
+                            <h3>Firma de Contrato y Pago</h3>
+                            <p>Firma el formulario físico (o firma digital en tablet) con los términos y condiciones del
+                                servicio, y realiza el pago en efectivo o con datáfono.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-badge presencial">5</div>
+                        <div class="step-content">
+                            <h3>Entrega e Instrucciones de Uso</h3>
+                            <p>Recibe la bicicleta junto con las llaves del candado y una breve explicación sobre las
+                                normas de circulación y los puntos autorizados de devolución.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </section>
         </article>
 
         <!--Bloque Beneficios-->
-        <article id="Beneficios">
-            <header>
-                <h2 tabindex="0">Beneficios</h2>
-                <p>Contamos con alianzas de recorridos con grandes empresas como lo son <strong>Comfama,Alcaldia de
-                        Medellin y Inder</strong>con el objetivo de crear un espacio seguro y diverso en tus
-                    actividades. <br>
-                    Ademas de ello contamos en nuestra sedes con:</p>
-            </header>
-
-            <!--Benefecios Sede-->
-            <article id="Sede">
-                <h2 tabindex="0">Sede:</h2>
-                <ul>
-                    <li>Acceso a una amplia variedad de bicicletas para diferentes actividades.</li>
-                    <li>Soporte técnico y atención al cliente.</li>
-                    <li>Seguro ante perdida y robo.</li>
-                </ul>
-            </article>
-
-        <!--Benefecios Recorrido-->
-        <article id="recorrido">
-            <h2 tabindex="0">Recorridos guiados:</h2>
-            <p>Se programan quincenalmente recorridos por partes del valle de aburra y sus alrededores, lo que permite
-                viajar
-                y disfrutar del deporte que tanto amamos.<br>
-                Contamos con alianzas con <strong>Comfama</strong> y <strong>Inder</strong> para el apoyo de estas
-                actividades.</p>
-                </article>
-            <article id="Recorrido">
-                <h2>Recorrido Quincenal: <time datetime="31-10-2026">31 de Octubre</time></h2>
-                <p>En este mes de octubre haremos la ruta del cerro del volador con disfraces!</p>
-                <a href="https://maps.app.goo.gl/w4BMP2JzTjfo9PBx7" target="_blank">
-                    <img src="img/Recursos/Ruta.png" alt="Recorrido que se va a realizar">
-                </a>
+        <article class="card" id="Beneficios">
+            <h2 tabindex="0">Beneficios</h2>
+            <p>Contamos con alianzas estratégicas con entidades líderes como <strong>Comfama, Alcaldia de
+                    Medellin y Inder</strong> , con el objetivo de brindarte un espacio seguro, incluyente y diverso
+                para tus actividades deportivas y de esparcimiento. <br>
+                Ademas de ello contamos en nuestra sedes con:</p>
         </article>
-        <article id="taller">
+
+        <!--Benefecios Sede-->
+        <article class="card" id="Sede">
+            <h2 tabindex="0">En nuestras Sedes:</h2>
+            <ul>
+                <li><strong>Variedad de flota:</strong>Acceso inmediato a una amplia gama de bicicletas adaptadas a
+                    distintas disciplinas y necesidades.</li>
+                <li><strong>Soporte técnico y mantenimiento:</strong>Asistencia mecánica especializada en el punto y
+                    atención personalizada para ajustar tu equipo antes de salir.</li>
+                <li><strong>Asesoría de rutas en vivo:</strong>Orientación directa con nuestro equipo para elegir
+                    las mejores rutas locales y rutas programadas con nuestras entidades aliadas.</li>
+                <li><strong>Prueba y ajuste:</strong>Posibilidad de probar la bicicleta y ajustar la altura o
+                    accesorios según tu comodidad en el sitio.</li>
+                <li><strong>Entrega y devolución ágil:</strong>Puntos físicos habilitados para gestionar tu alquiler
+                    de forma rápida y segura.</li>
+            </ul>
+            <!--Beneficios Web-->
+            <h2>Web:</h2>
+            <ul>
+                <li><strong>Reserva 24/7:</strong>Agenda tu bicicleta y tus rutas programadas en cualquier momento y
+                    desde cualquier lugar.</li>
+                <li><strong>Selección de rutas guiadas y eventos:</strong>Explora el calendario digital de rutas
+                    programadas e inscríbete de manera directa a los recorridos organizados con nuestros aliados.
+                </li>
+                <li><strong>Catálogo interactivo:</strong>Visualiza todas las opciones de bicicletas con sus
+                    especificaciones para elegir la ideal según tu plan.</li>
+                <li><strong>Confirmación inmediata:</strong>Recibe la validación de tu reserva y comprobante digital
+                    en
+                    minutos sin hacer filas.</li>
+                <li><strong>Gestión personalizada:</strong>Modifica o consulta los detalles de tu alquiler y rutas
+                    adquiridas de forma fácil y centralizada.</li>
+            </ul>
+        </article>
+
+        <article class="card" id="taller">
             <h2 tabindex="0">Taller básico</h2>
-            <p>Contamos con programa de enseñanza para los <strong>niños, jovenes y adultos</strong> que quieran
-                aprender a
-                montar bicicleta.</p>
+            <p>Ofrecemos un programa de aprendizaje integral diseñado para <strong>niños, jóvenes y adultos</strong>
+                que deseen
+                aprender a montar en bicicleta o perfeccionar su técnica. Contamos con instructores capacitados para
+                brindarte la confianza y seguridad que necesitas en cada etapa.</p>
         </article>
 
-        <article id="como">
-            <h2 tabindex="0">¿Como alquilar?</h2>
-            <p>Para alquilar nuestras bicicletas necesitas ser <strong>mayor de edad, en caso de querer alquilarla
-                    siendo
-                    menor de edad debes venir con un mayor de edad.</strong> <br>
-                Necesitamos tu <strong>cedula y un coodeudor</strong> para respaldar la reposición en caso de daños o
-                perdida sin justificación.</p>
-        </article>
-        <section id="pasos">
-            <h3 tabindex="0">Procedimiento de alquiler</h3>
-            <table id="procedimiento">
-                <tr>
-                    <th>Virtual</th>
-                    <th>Presencial</th>
-                </tr>
-                <tr>
-                    <td>
-                        <ol>
-                            <li>Selecciona la bicicleta que deseas alquilar.</li>
-                            <li>Verifica la disponibilidad de la bicicleta que deseas.</li>
-                            <li>Llena el formulario de alquiler.</li>
-                            <li>Carga los documentos solicitados.</li>
-                            <li>Dirijete a la sede.</li>
-                        </ol>
-                    </td>
-                    <td>
-                        <ol>
-                            <li>Selecciona la bicicleta que deseas alquilar.</li>
-                            <li>Presenta tu cédula y la del coodeudor.</li>
-                            <li>Firma el contrato de alquiler.</li>
-                            <li>Recibe tu bicicleta y disfruta de tu recorrido.</li>
-                        </ol>
-                    </td>
-                </tr>
-            </table>
-        </section>
-
-        <article id="encuentranos">
+        <article class="card" id="encuentranos">
             <h2 tabindex="0">Encuentranos</h2>
             <p>Puedes encontrarnos en el centro comercial: De Moda Outlet <br>
                 Dirección: Cl. 16 #55-129, Guayabal, Medellín, Guayabal</p>
@@ -216,14 +248,40 @@
     </main>
 
     <!--Pie de pagina-->
-    <hr>
-    <footer>
+    <footer id="pie-pagina">
         <address>
             Rueda Libre - 2026 <br>
             Correo electronico <a href="mailto:hola@ruedalibre.example" target="_blank"
                 rel="noopener noreferrer">hola@ruedalibre.example</a>
         </address>
     </footer>
+
+    <!--Scripts (Esto esta hecho con IA)-->
+    <script>
+        const btnToggle = document.querySelector('.menu-toggle');
+        const menuPrincipal = document.querySelector('.menu-principal');
+
+        if (btnToggle && menuPrincipal) {
+            btnToggle.addEventListener('click', () => {
+                menuPrincipal.classList.toggle('activo');
+            });
+        }
+    </script>
+    <script>
+        function switchTab(event, tabId) {
+            // Desactivar todos los botones
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+
+            // Ocultar todas las pestañas
+            const panes = document.querySelectorAll('.tab-pane');
+            panes.forEach(pane => pane.classList.remove('active'));
+
+            // Activar la pestaña y el botón seleccionado
+            event.currentTarget.classList.add('active');
+            document.getElementById(tabId).classList.add('active');
+        }
+    </script>
 </body>
 
 </html>
