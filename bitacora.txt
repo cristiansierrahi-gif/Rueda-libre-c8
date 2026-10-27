@@ -1,8 +1,11 @@
-PUnto uno:
-URL: http://127.0.0.1:5500/index.html
-Protocolo: http
-Petición: GET
-host: 127.0.0.1:5500
-ruta: /index.html
-codigo de estado:200
-codigo error: 404 Not Found - Cannot GET /promociones.html
+Punto uno:
+-URL: http://127.0.0.1:5500/index.html
+-Protocolo: http
+-Petición: GET
+-host: 127.0.0.1:5500
+-ruta: /index.html
+-codigo de estado:200
+-codigo error: 404 Not Found - Cannot GET /promociones.html
+- Html es una herramienta que nos permite estructurar el codigo de una pagina, se puede explicar tambien como un esqueleto. El CSS cumple la función de decorar, aplicar estilos que
+  se pueden modificar como la persona o el cliente lo solicite, siguiendo con la analogia es la carne del esqueleto de la pagina. Por ultimo JavaScript funciona para aplicar funciones,
+  herramientas y complementar el apartado de estilos.
