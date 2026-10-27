@@ -9,3 +9,25 @@ Punto uno:
 - Html es una herramienta que nos permite estructurar el codigo de una pagina, se puede explicar tambien como un esqueleto. El CSS cumple la función de decorar, aplicar estilos que
   se pueden modificar como la persona o el cliente lo solicite, siguiendo con la analogia es la carne del esqueleto de la pagina. Por ultimo JavaScript funciona para aplicar funciones,
   herramientas y complementar el apartado de estilos.
+
+  Punto dos:
+  +------------------------------------------------------------------------------+
+  |                          ENCABEZADO (<header>)                               |
+  |  [Logotipo] (H1) ENCABEZADO                [Menú de Navegación (<nav>)]      |
+  +------------------------------------------------------------------------------+
+  |  
+  |                                BIENVENIDA
+  |         +-----------------------------------------------------------+
+  |         |                                                           |
+  |         |                    IMAGEN CABEZAL                         |
+  |         |                                                           |
+  |         |                                                           |
+  |         |                                                           |
+  |         +-----------------------------------------------------------+
+  |  
+  |  
+  |  
+  |  
+  |    
+
+
